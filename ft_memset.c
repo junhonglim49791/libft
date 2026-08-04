@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:37:05 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 16:21:14 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/04 16:32:08 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ RETURN VALUE
        The memset() function returns a pointer to the memory area s.
 c is expected to be 
 */
+
+//cast to char* to do pointers arithmetic
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
@@ -28,7 +30,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	str = s;
 	while (i < n)
 		*(str + i++) = c;
-	return (str);
+	return (s);
 }
 
 /*
@@ -38,7 +40,6 @@ void	*ft_memset(void *s, int c, size_t n)
 int	main(void)
 {
 	char str[32] = "This is to learn about memset()"; // +1 for null
-	char extra = 'X';  // add this line
 	ft_memset(str + 15, '*', 5);
 	printf("ft_memset: %s\n",str);
 	memset(str + 15 , '*', 5);
