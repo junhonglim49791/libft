@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 16:25:01 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 16:37:16 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/04 19:04:41 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	main(void)
 {
 	char str[32] = "This is to learn about bzero()"; // +1 for null
 	ft_bzero(str + 15, 5);
-	// printf stops at the first null because in C definition thats the end of string
+	// printf stops at the first null thats the end of string
 	printf("ft_bzero: %s\n",str);
 	bzero(str + 15, 5);
 	printf("bzero: %s\n",str);
