@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:37:05 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 16:39:12 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/04 18:03:16 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ RETURN VALUE
 c is expected to be 
 */
 
-//cast to char* to do pointers arithmetic
+//cast to char* to do pointers arithmetic, if not compiler doesn't know
+// how many bytes to move
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;

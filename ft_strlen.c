@@ -6,12 +6,13 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:20:17 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 16:23:41 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/04 18:04:17 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-// size_t has 8 bytes while int has 4 bytes. There won't be -ve num of chars
+// size_t has 8 bytes while int has 4 bytes to accomodate longer strings. 
+//There won't be -ve num of chars
 // const to make the string read only as this function only returns its length
 size_t	ft_strlen(const char *s)
 {
