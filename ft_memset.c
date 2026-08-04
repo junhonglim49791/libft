@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:37:05 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 16:32:08 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/04 16:39:12 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,8 @@ int	main(void)
 	return (0);
 }
 /*
+it works when c = 0 or c = -1 as the output will be the same in
+1 byte or 4 byte conditions
 in this case if 40 bytes all 0x02:
 		0x02 0x02 0x02 0x02 0x02 .... 
 n byte:  1    2    3    4    5
