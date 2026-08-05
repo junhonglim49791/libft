@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 18:35:22 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/05 00:40:45 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/05 09:29:35 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,27 +128,27 @@ if dst > src
 */
 #include <stddef.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*s_dst;
+	char		*s_dst;
 	const char	*s_src;
-	
+
 	s_dst = dest;
 	s_src = src;
-	
 	if (s_dst > s_src)
-	{	
+	{
 		while (n-- > 0)
-			s_dst[n] = s_src[n]; 
+			s_dst[n] = s_src[n];
 	}
-	else 
+	else
 	{
 		while (n-- > 0)
 			*s_dst++ = *s_src++;
 	}
-	return (dest);  
+	return (dest);
 }
 
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -184,3 +184,4 @@ int	main(void)
 	printf("dest4: %s\n",dest4);	
 	return (0);
 }
+*/
