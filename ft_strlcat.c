@@ -1,0 +1,69 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/05 09:31:38 by junlim            #+#    #+#             */
+/*   Updated: 2026/08/05 23:40:38 by junlim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+Note, however, that if strlcat() traverses size characters without finding a 
+NUL, the length of the string is considered to be size and the destination 
+string will not be NUL-terminated (since there was no space for the NUL)
+
+--> this means when dst's length is bigger than its buffer size, so just return
+the supposed concat string of dstsize + src, and don't do anything to avoid
+unsafe concat. Because we should only concat when there is enough spaces in dst,
+which mean dstsize should be greater than dst's current length.
+
+dstsize > dst_len + 1 is to calculate the remaining space
+*/
+/*
+if dstsize is -negative, it will become a very large number and get caught
+by if (dst_len > dstsize)
+*/
+#include <stddef.h>
+
+size_t	ft_strlen(const char *s);
+
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+{
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+
+	i = 0;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dst_len > dstsize)
+		return (dstsize + src_len);
+	while (src[i] && dstsize > dst_len + i + 1)
+	{
+		dst[dst_len + i] = src[i];
+		i++;
+	}
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
+}
+/*
+#include <stdio.h>
+#include <bsd/string.h>
+
+int	main(void)
+{
+	char dest_ft[10] = "Hello";
+	char *src_ft = " World";
+	char dest[10] = "Hello";
+	char *src = " World";
+
+	//change 10 -> 5 to check if (dst_len > dstsize)
+	printf("dest_ft's length: %ld\n", ft_strlcat(dest_ft, src_ft, 10));
+	printf("dest_ft: %s\n", dest_ft);
+	printf("dest's length: %ld\n", strlcat(dest, src, 10));
+	printf("dest: %s\n", dest);
+}
+*/

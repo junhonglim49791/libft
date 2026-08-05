@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 16:35:53 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/05 00:07:38 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/05 23:42:35 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,13 @@
 	
 	this is not added because its not necessary from the manual's
 	standpoint
+*/
+
+/*
+	while (n-- > 0)
+	1. n > 0 is evaluated
+	2. n--
+	3. execute function body
 */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
