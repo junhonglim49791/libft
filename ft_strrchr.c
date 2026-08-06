@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:24:40 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 19:29:05 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 19:41:36 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,14 @@
 garbage value
 2. this is slower when the string is longer because im not starting from behind
 
+// len = strlen(s), NOT strlen(s) - 1: starting at the terminator's own
+// index lets one loop handle both "find last char" AND c == '\0'
+// strlen(s) - 1 will skips the null terminator
+
 another imeplementation:
 char	*ft_strrchr(const char *s, int c)
 {
-	int s_len; //
+	int s_len; // using size_t will always makes the while loop true
 
 	s_len = ft_strlen(s);
 
@@ -34,7 +38,8 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-
+3. if address is used to iterate, then don't have to worry when int s_len is
+not enough for longer strings
 */
 char	*ft_strrchr(const char *s, int c)
 {
