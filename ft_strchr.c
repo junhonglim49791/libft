@@ -6,10 +6,20 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:11:44 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 19:07:41 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 20:15:13 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// Why c must be cast to (char) before comparing (example: c = 128)
+//
+// Expression         | Raw value | Goes through char? | Final int value
+// -------------------|-----------|---------------------|----------------
+// *s (byte 0x80)     | 128       | yes (char is signed) | -128
+// c   (no cast)      | 128       | no                   |  128
+// (char)c            | 128       | yes (forced)          | -128
+//
+// *s == c        ->  -128 == 128   -> false   (WRONG - same byte, missed)
+// *s == (char)c  ->  -128 == -128  -> true    (correct - matches real strchr)
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

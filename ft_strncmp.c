@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 19:43:28 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 20:07:03 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 20:11:23 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ in this case without if(i == n), it will compare s1's null and s2's d.
 if(i == n) if i can compare up to n bytes, means every thing is the same
 */
 /*
-unsigned char comparison is required according to the manual
+unsigned char comparison is required according to the manual, if not
+the range is different and causes inconsistencies.
 */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
