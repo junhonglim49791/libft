@@ -6,17 +6,18 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:08:20 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 18:08:48 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 18:13:09 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')
 		return (c + 32);
 	return (c);
 }
 
+/*
 #include <stdio.h>
 
 int main(void)
@@ -25,3 +26,4 @@ int main(void)
 	printf("%c", ft_tolower('A'));
 	printf("%c", ft_tolower('1'));
 }
+*/
