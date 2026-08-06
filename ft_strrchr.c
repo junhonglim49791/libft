@@ -1,0 +1,67 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/06 18:24:40 by junlim            #+#    #+#             */
+/*   Updated: 2026/08/06 19:29:05 by junlim           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
+1. last must be initialized to null so that when *s is null, it will return
+garbage value
+2. this is slower when the string is longer because im not starting from behind
+
+another imeplementation:
+char	*ft_strrchr(const char *s, int c)
+{
+	int s_len; //
+
+	s_len = ft_strlen(s);
+
+	while (s_len >= 0)
+	{
+		if (s[s_len] == (char) c)
+			return ((char *) &s[s_len]);
+		s_len--;
+	}
+	// this is redundant as now it starts cehcking from behind and while loop is
+	// not stopped by '\0' anymore
+	if ((char) c == 0) 
+		return ((char *)s);
+	return (0);
+}
+
+*/
+char	*ft_strrchr(const char *s, int c)
+{
+	const char	*last;
+
+	last = 0;
+	while (*s)
+	{
+		if (*s == (char)c)
+			last = s;
+		s++;
+	}
+	if ((char) c == 0)
+		return ((char *)s);
+	return ((char *) last);
+}
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char *s = "Find a char in a string";
+	char to_find = 'a';
+
+	printf("%s\n", ft_strrchr(s, to_find));
+	printf("%s\n", strrchr(s, to_find));
+}
+*/
