@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 09:31:38 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 09:43:22 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 09:56:54 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,20 @@ Further improvement
 	if (dst_len == dstsize)
 		return (dstsize + src_len);
 
-	// Example:
+	// Example 1:
 	//   dst     = "Hello"
 	//   dstsize = 3
 	//
 	// The actual string length is 5, but we only search the first 3 bytes.
 	// Therefore dst_len becomes 3 (not 5), and we return without appending.
+	
+	// Example 2:
+	//   char dst[5] = {'H', 'e', 'l', 'l', 'o'};
+	//   dstsize = 5
+	//
+	// ft_strlen(dst) would continue reading past the end of dst looking for
+	// '\0', causing undefined behavior. The bounded search stops after the
+	// first 5 bytes, so it never reads outside the destination buffer.
 */
 #include <stddef.h>
 
