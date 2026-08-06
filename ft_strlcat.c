@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 09:31:38 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/05 23:40:38 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/06 09:43:22 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,28 @@ dstsize > dst_len + 1 is to calculate the remaining space
 /*
 if dstsize is -negative, it will become a very large number and get caught
 by if (dst_len > dstsize)
+*/
+/*
+Further improvement
+
+	Don't use ft_strlen(dst) here. Use a bounded search equivalent to 
+	strnlen(dst, dstsize). This never reads beyond the first dstsize 
+	bytes. If dst's length > buffer size (dstsize), means no space and return.
+
+	 * 
+	dst_len = 0;
+	while (dst_len < dstsize && dst[dst_len])
+		dst_len++;
+	src_len = ft_strlen(src);
+	if (dst_len == dstsize)
+		return (dstsize + src_len);
+
+	// Example:
+	//   dst     = "Hello"
+	//   dstsize = 3
+	//
+	// The actual string length is 5, but we only search the first 3 bytes.
+	// Therefore dst_len becomes 3 (not 5), and we return without appending.
 */
 #include <stddef.h>
 
