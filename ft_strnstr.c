@@ -6,13 +6,13 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 08:51:35 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/07 20:41:55 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/07 21:05:17 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i_big;
 	size_t	i_little;
@@ -23,11 +23,12 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *) big);
 	while (i_big < len && big[i_big])
 	{
-		while (i_big + i_little < len  && big[i_big + i_little] == little[i_little])
+		while (i_big + i_little < len
+			&& big[i_big + i_little] == little[i_little])
 		{
 			i_little++;
-			if(little[i_little] == '\0')
-				return ((char* ) &big[i_big]);
+			if (little[i_little] == '\0')
+				return ((char *) &big[i_big]);
 		}
 		i_little = 0;
 		i_big++;
@@ -35,7 +36,7 @@ char *ft_strnstr(const char *big, const char *little, size_t len)
 	return (0);
 }
 
-
+/*
 #include <stdio.h>
 #include <bsd/string.h>
 
@@ -54,7 +55,7 @@ then it woulld still return "target in this string. ?"
 
 	without reset, ft_strnstr: cc get in this string. ?
 */
-
+/*
 int	main(void)
 {
 	{
@@ -70,4 +71,4 @@ int	main(void)
 
 	}
 }
-
+*/

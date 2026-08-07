@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 08:36:48 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/07 08:50:56 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/07 21:05:34 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str1 = s1;
 	str2 = s2;
 	i = 0;
-
 	while (i < n && str1[i] == str2[i])
 		i++;
 	if (i == n)
