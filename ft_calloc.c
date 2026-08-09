@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 21:31:27 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 14:08:13 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/09 14:34:43 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,9 @@ Same logic applies to 64 bits, which is size_t
 */
 void	ft_bzero(void *s, size_t n);
 
-void *ft_calloc (size_t nelem, size_t elsize)
+void	*ft_calloc(size_t nelem, size_t elsize)
 {
-	void *s;
+	void	*s;
 
 	if (elsize != 0 && nelem > (size_t)-1 / elsize)
 		return (NULL);
