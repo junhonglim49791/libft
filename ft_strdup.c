@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 14:30:57 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 14:53:52 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/09 14:56:43 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
 
 /*
+QUESTION: Why stddef.h for size_t is not needed here?
 Although ft_strlen can be called whenever needed, if the string is too long,
 extra calls will slow down the program. 
 
