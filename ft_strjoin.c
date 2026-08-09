@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 16:38:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 17:13:13 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/09 17:14:05 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ we expected
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char 	*concat_s;
+	char	*concat_s;
 	size_t	concat_len;
 
 	concat_len = ft_strlen(s1) + ft_strlen(s2) + 1;
 	concat_s = malloc(sizeof(char) * concat_len);
-	if(!concat_s)
+	if (!concat_s)
 		return (NULL);
 	concat_s[0] = '\0';
 	ft_strlcat(concat_s, s1, concat_len);
@@ -48,7 +48,8 @@ void	check(const char *desc, char *result, const char *expected)
 		return ;
 	}
 	if (strcmp(result, expected) != 0)
-		printf("%-75s -> \"%s\"  FAIL (expected \"%s\")\n", desc, result, expected);
+		printf("%-75s -> \"%s\"  FAIL (expected \"%s\")\n", desc, 
+		result, expected);
 	else
 		printf("%-75s -> \"%s\"  PASS\n", desc, result);
 	free(result);
