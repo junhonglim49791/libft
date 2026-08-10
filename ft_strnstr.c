@@ -6,12 +6,17 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 08:51:35 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/07 21:05:17 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/10 02:23:11 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
+/*
+while (i_big < len && big[i_big])
+i_big < len is to stop executing the inner while loop earlier eventhough
+the innger i_big + i_little < len is the same check. But its still safe 
+to include it as it will stop properly when big is not null terminated
+*/
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i_big;

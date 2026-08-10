@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 16:38:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 17:14:05 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/09 17:28:03 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,12 @@
 concat_s[0] = '\0';
 this is important because malloc() doesn't guarantee "clean" space, that's why
 memset() or bzero() is important as we can start in a initial state that
-we expected
+we expected. Without this, in ft_strlcat, 	dst_len = ft_strlen(dst) will
+find the length of garbage values until '\0' is met.
+
+bzero is safe because it make sure there are no garbage values in the
+allocated space. the current ft_strjoin allocates every space with
+proper values, replacing every garbage value.
 */
 #include <stdlib.h>
 
