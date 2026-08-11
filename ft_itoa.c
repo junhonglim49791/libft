@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 16:02:53 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 17:57:33 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/11 23:55:31 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_itoa(int n)
 
 	long_n = n;
 	count = count_chars(long_n);
-	num = ft_calloc(count_chars(long_n) + 1, sizeof(char));
+	num = ft_calloc(count + 1, sizeof(char));
 	if (!num)
 		return (0);
 	if (long_n < 0)

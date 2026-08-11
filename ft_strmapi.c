@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 17:57:42 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 18:43:41 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/12 00:05:27 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_toupper(int c);
 char	odd_toupper(unsigned int i, char c)
 {
 	if (i % 2 != 0)
-		return(ft_toupper(c));
+		return (ft_toupper(c));
 	return (c);
 }
 
@@ -44,7 +44,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	while (s[++i])
 		str[i] = f(i, s[i]);
 	str[i] = '\0';
-	return (str);	
+	return (str);
 }
 
 /*
@@ -58,4 +58,3 @@ int	main(void)
 	return (0);
 }
 */
-
