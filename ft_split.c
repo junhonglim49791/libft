@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 08:28:03 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 16:00:53 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/11 16:01:26 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ split_str[i_words] = 0; this is not necessary when i use calloc, which
 correctly inizialize all the memory spaces with '\0'
 
 5.
-when s or c is null, calloc returns empty string
+when s, calloc returns empty string
 */
 
 char	**ft_split(char const *s, char c)
