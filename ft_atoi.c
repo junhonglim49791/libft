@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 20:44:48 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/07 22:09:16 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/11 09:02:01 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isdigit(int c);
 	vertical tab ('\v').
 */
 
-int	ft_isspace(int c)
+static int	isspace(int c)
 {
 	if ((9 <= c && c <= 13) || c == 32)
 		return (1);
@@ -34,7 +34,7 @@ int	ft_atoi(const char *s)
 	i = 0;
 	sign = 1;
 	sum = 0;
-	while (ft_isspace(s[i]))
+	while (isspace(s[i]))
 		i++;
 	if (s[i] == '-' || s[i] == '+')
 	{

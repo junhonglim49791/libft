@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 17:15:02 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/10 10:13:12 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/11 14:34:42 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strdup(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
-int	isset(int c, const char *set)
+static int	isset(int c, const char *set)
 {
 	while (*set)
 	{
@@ -33,7 +33,7 @@ int	isset(int c, const char *set)
 			return (1);
 		set++;
 	}
-	return(0);
+	return (0);
 }
 
 /*
@@ -52,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t			len;
 	unsigned int	start;
-	size_t	end;
+	size_t			end;
 
 	if (!s1)
 		return (ft_strdup(""));
@@ -67,10 +67,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(""));
 	while (isset(s1[end--], set))
 		len--;
-	return	(ft_substr(s1 , start, len));	
+	return (ft_substr(s1, start, len));
 }
-
-
+/*
 #include <string.h>
 #include <stdio.h>
 
@@ -82,7 +81,8 @@ void	check(const char *desc, char *result, const char *expected)
 		return ;
 	}
 	if (strcmp(result, expected) != 0)
-		printf("%-35s -> \"%s\"  FAIL (expected \"%s\")\n", desc, result, expected);
+		printf("%-35s -> \"%s\"  FAIL (expected \"%s\")\n", desc, 
+		result, expected);
 	else
 		printf("%-35s -> \"%s\"  PASS\n", desc, result);
 	free(result);
@@ -91,7 +91,8 @@ void	check(const char *desc, char *result, const char *expected)
 int	main(void)
 {
 	// normal cases
-	check("trim both sides",         ft_strtrim("  Hello World  ", " "), "Hello World");
+	check("trim both sides",         ft_strtrim("  Hello World  ", " "), 
+	"Hello World");
 	check("trim left only",          ft_strtrim("  Hello", " "), "Hello");
 	check("trim right only",         ft_strtrim("Hello  ", " "), "Hello");
 	check("nothing to trim",         ft_strtrim("Hello", " "), "Hello");
@@ -107,7 +108,7 @@ int	main(void)
 	check("set chars not present",   ft_strtrim("Hello", "xyz"), "Hello");
 	return (0);
 }
-
+*/
 /*
 VERSION
 v1:
