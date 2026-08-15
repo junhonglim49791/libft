@@ -6,9 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 13:39:46 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 13:48:49 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:27:17 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

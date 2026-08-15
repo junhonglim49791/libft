@@ -6,17 +6,18 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 08:51:35 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/10 02:23:11 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 22:09:43 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 /*
 while (i_big < len && big[i_big])
 i_big < len is to stop executing the inner while loop earlier eventhough
 the innger i_big + i_little < len is the same check. But its still safe 
 to include it as it will stop properly when big is not null terminated
 */
+
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i_big;
@@ -45,22 +46,22 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 #include <stdio.h>
 #include <bsd/string.h>
 
-/*
-Some cases to consider:
-1.
-	char *str = "hello, please target in this string. ?";
-	char *to_find = "target";
 
-check when len = 15, whether is null or not. without i_big + i_little < len,
-then it woulld still return "target in this string. ?" 
+// Some cases to consider:
+// 1.
+// 	char *str = "hello, please target in this string. ?";
+// 	char *to_find = "target";
 
-2. check whether i_little is reset or not
-		char *str = "hello, please tar cc get in this string. ?";
-		char *to_find = "target";
+// check when len = 15, whether is null or not. without i_big + i_little < len,
+// then it woulld still return "target in this string. ?" 
 
-	without reset, ft_strnstr: cc get in this string. ?
-*/
-/*
+// 2. check whether i_little is reset or not
+// 		char *str = "hello, please tar cc get in this string. ?";
+// 		char *to_find = "target";
+
+// 	without reset, ft_strnstr: cc get in this string. ?
+
+
 int	main(void)
 {
 	{

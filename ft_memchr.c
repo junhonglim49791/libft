@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 20:13:02 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/07 00:18:35 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:02:23 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 /*
 	The memchr() function scans the initial n bytes of the memory area
 	pointed to by s for the first instance of c.  Both c and the bytes
@@ -35,6 +35,7 @@
 void is necessary because of const unsigned char *, without const, it will
 be implicitly converted to void * without the cast
 */
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*s_s;

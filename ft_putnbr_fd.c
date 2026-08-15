@@ -6,14 +6,12 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 01:15:31 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/12 01:41:58 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:06:18 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-char	*ft_itoa(int n);
-void	ft_putstr_fd(char *s, int fd);
 /*
 whenever deal with functions that return address from heap:
 1. must return to prevent memory leak. 

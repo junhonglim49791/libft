@@ -6,12 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 21:31:27 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 14:34:43 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:03:54 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 /*
 If the size of the
@@ -43,8 +42,6 @@ Read as unsigned (uint8): 255
 
 Same logic applies to 64 bits, which is size_t
 */
-void	ft_bzero(void *s, size_t n);
-
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*s;

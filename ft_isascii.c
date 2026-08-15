@@ -6,9 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 13:52:39 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 14:10:53 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:30:05 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 checks whether c is a 7-bit unsigned char value that fits

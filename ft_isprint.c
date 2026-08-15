@@ -6,9 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:11:18 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 14:17:47 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:30:08 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

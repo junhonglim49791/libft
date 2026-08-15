@@ -6,13 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 16:02:53 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 23:55:31 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:09:24 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-void	*ft_calloc(size_t nelem, size_t elsize);
+#include "libft.h"
 
 static int	count_chars(long int n)
 {

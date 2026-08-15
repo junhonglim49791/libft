@@ -6,15 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 14:55:31 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 16:37:19 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:53:09 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
-char	*ft_strdup(const char *s1);
+#include "libft.h"
 
 /*
 CORRECTIONS

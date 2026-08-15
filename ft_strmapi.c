@@ -6,22 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 17:57:42 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/12 00:05:27 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 22:10:40 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-void	*ft_calloc(size_t nelem, size_t elsize);
-int		ft_toupper(int c);
-
-char	odd_toupper(unsigned int i, char c)
-{
-	if (i % 2 != 0)
-		return (ft_toupper(c));
-	return (c);
-}
+#include "libft.h"
 
 /*
 C doesn't guarantee which function argument get evaluated first:
@@ -48,6 +37,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 
 /*
+char	odd_toupper(unsigned int i, char c)
+{
+	if (i % 2 != 0)
+		return (ft_toupper(c));
+	return (c);
+}
+
 #include <stdio.h>
 
 int	main(void)

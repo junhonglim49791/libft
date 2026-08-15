@@ -6,13 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 00:18:20 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/12 01:14:19 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:05:45 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr_fd(char *s, int fd);
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

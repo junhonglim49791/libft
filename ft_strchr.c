@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:11:44 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 20:15:13 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:48:35 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 //
 // *s == c        ->  -128 == 128   -> false   (WRONG - same byte, missed)
 // *s == (char)c  ->  -128 == -128  -> true    (correct - matches real strchr)
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

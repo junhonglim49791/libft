@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:24:40 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 19:41:36 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:13:45 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strrchr(const char *s, int c)
 3. if address is used to iterate, then don't have to worry when int s_len is
 not enough for longer strings
 */
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	const char	*last;

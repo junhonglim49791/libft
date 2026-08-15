@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 00:43:49 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 15:03:07 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:50:23 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,7 @@ char	*ft_strcpy(char *dest, char *src)
 (dst_size > 0) and (dst_size) has functionally no difference,
 main purpose is to copy when dst_size is not 0
 */
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size)
 {

@@ -6,9 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 12:48:32 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 13:48:57 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:25:44 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

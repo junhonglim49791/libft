@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 16:35:53 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/05 23:42:35 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:01:42 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 //does not handle memory areas that overlap
 /*

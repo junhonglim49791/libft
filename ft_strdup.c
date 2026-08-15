@@ -6,14 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 14:30:57 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 14:56:43 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:52:37 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
+#include "libft.h"
 
 /*
 QUESTION: Why stddef.h for size_t is not needed here?

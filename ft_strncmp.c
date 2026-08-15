@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 19:43:28 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 20:11:23 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:51:48 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 /*
 	char *s1 = "abc";

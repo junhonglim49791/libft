@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 17:15:02 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 14:34:42 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:54:11 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 /*
 Look at how many proptotypes need to be called and compiled each time,
 no matter in this file 
@@ -18,12 +18,7 @@ or in the terminal command:
 ccc ft_strtrim.c ft_strdup.c ft_substr.c ft_strlen.c ft_strlcpy.c
 
 this is the REASON to make a library.
-
 */
-size_t	ft_strlen(const char *s);
-char	*ft_strdup(const char *s1);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dst_size);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 static int	isset(int c, const char *set)
 {

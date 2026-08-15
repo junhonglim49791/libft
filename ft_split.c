@@ -6,16 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 08:28:03 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 16:01:26 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:55:24 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>  
-#include <string.h>
-
-void	*ft_calloc(size_t nelem, size_t elsize);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+#include "libft.h"
 
 static	int	count_words(const char *s, char delim)
 {
@@ -125,6 +120,9 @@ char	**ft_split(char const *s, char c)
 }
 
 /*
+#include <stdio.h>  
+#include <string.h>
+
 void	check(const char *desc, char **result, const char **expected,
 		int expected_count)
 {

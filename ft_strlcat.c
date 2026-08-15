@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 09:31:38 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 09:56:54 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:50:51 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,7 @@ Further improvement
 	// '\0', causing undefined behavior. The bounded search stops after the
 	// first 5 bytes, so it never reads outside the destination buffer.
 */
-#include <stddef.h>
-
-size_t	ft_strlen(const char *s);
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

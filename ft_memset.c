@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:37:05 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/04 19:12:18 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:51:52 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 /*
 DESCRIPTION
        The memset() function fills the first n bytes of the memory area
@@ -47,7 +47,7 @@ int	main(void)
 	printf("memset: %s\n",str);
 	return (0);
 }
-/*
+
 it works when c = 0 or c = -1 as the output will be the same in
 1 byte or 4 byte conditions
 in this case if 40 bytes all 0x02:

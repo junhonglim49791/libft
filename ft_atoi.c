@@ -6,11 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/07 20:44:48 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/11 09:02:01 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:08:58 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c);
+#include "libft.h"
 /*
 	checks for white-space characters.  In the "C" and "POSIX"
 	locales, these are: space, form-feed ('\f'), newline

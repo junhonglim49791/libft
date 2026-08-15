@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 18:35:22 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/05 09:29:35 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 21:02:04 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,7 +126,7 @@ if dst > src
  |      |
  src   dst  <--- will not overlapping
 */
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

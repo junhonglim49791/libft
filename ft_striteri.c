@@ -6,19 +6,12 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/11 18:44:41 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/12 00:05:02 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 22:12:58 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int		ft_toupper(int c);
-
-void	odd_toupper(unsigned int i, char *s)
-{
-	if (i % 2 != 0)
-		s[0] = ft_toupper(s[0]);
-}
 /*
 1. pass the char's address to f so that the value changes in-place
 2. this is to separate iteration logic and applied function f's logic,
@@ -35,6 +28,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 }
 
 /*
+void	odd_toupper(unsigned int i, char *s)
+{
+	if (i % 2 != 0)
+		s[0] = ft_toupper(s[0]);
+}
+
 #include <stdio.h>
 
 int	main(void)

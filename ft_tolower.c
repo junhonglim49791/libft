@@ -6,9 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/06 18:08:20 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/06 18:13:09 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:47:45 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_tolower(int c)
 {

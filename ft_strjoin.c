@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/09 16:38:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/09 17:28:03 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:53:39 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,7 @@ bzero is safe because it make sure there are no garbage values in the
 allocated space. the current ft_strjoin allocates every space with
 proper values, replacing every garbage value.
 */
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
