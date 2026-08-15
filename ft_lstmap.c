@@ -6,23 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 17:04:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:51:52 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:18:53 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-
+#include "libft.h"
 /*
 1.
 node = ft_lstnew(f(lst -> content))

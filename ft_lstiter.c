@@ -6,23 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 16:08:44 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:39:06 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:19:53 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
+#include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -34,6 +22,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 }
 
 /*
+#include <stdio.h>
+
 void	print_nodes(t_list *node)
 {
 	int i;

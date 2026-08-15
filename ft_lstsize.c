@@ -6,21 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 11:53:10 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:37:35 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:16:27 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+#include "libft.h"
 
 unsigned int	ft_lstsize(t_list *lst)
 {
@@ -36,6 +26,8 @@ unsigned int	ft_lstsize(t_list *lst)
 }
 
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 	int	a = 42;

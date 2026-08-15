@@ -6,18 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 07:53:17 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:26:24 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:08:44 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
+#include "libft.h"
 /*
 1.
 new = malloc(sizeof(t_list *)); is to create a linkedlist, not a new node. And 

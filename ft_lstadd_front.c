@@ -6,19 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 08:23:59 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:27:56 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:16:44 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-t_list	*ft_lstnew(void *content);
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
@@ -27,7 +19,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new -> next = *lst;
 	*lst = new;
 }
-
 /*
 #include <stdio.h>
 

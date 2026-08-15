@@ -6,20 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 12:11:23 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 19:30:44 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 20:17:39 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}				t_list;
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+#include "libft.h"
 
 /*if *lst is null then return NULL already*/
 t_list	*ft_lstlast(t_list *lst)
