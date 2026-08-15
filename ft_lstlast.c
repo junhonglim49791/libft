@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 12:11:23 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 12:49:26 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 13:41:04 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,17 @@ int	main(void)
 	t_list	*node1;
 	t_list	*node2;
 	
+	printf("----------------Creating 2 nodes-------------------------------\n");
 	node1 = ft_lstnew(&a);
 	if (!node1)
 		return (0);
-	printf("----------------Creating 2 nodes-------------------------------\n");
 	printf("node1 addrs: %p\n", node1);
 	printf("node1 content: %d\n", *(int *)node1 -> content);
 	node2 = ft_lstnew(&b);
-	printf("node2 addrs: %p\n", node2);
-	printf("node2 content: %d\n", *(int *)node2 -> content);
 	if (!node2)
 		return (0);
+	printf("node2 addrs: %p\n", node2);
+	printf("node2 content: %d\n", *(int *)node2 -> content);
 	//add node 2 infront of node1
 	printf("------Creating list by adding node2 infront of node1------------\n");
 	ft_lstadd_front(&node1, node2);
