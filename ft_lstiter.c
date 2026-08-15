@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 16:08:44 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 17:02:51 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:39:06 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst -> next;
 	}
 }
+
 /*
 void	print_nodes(t_list *node)
 {

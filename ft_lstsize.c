@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 11:53:10 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 12:10:58 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:37:35 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ unsigned int	ft_lstsize(t_list *lst)
 	}
 	return (size);
 }
+
 /*
 int	main(void)
 {
@@ -45,9 +46,7 @@ int	main(void)
 	node1 = ft_lstnew(&a);
 	if (!node1)
 		return (0);
-	printf("node1 addrs: %p\n", node1);
 	node2 = ft_lstnew(&b);
-	printf("node2 addrs: %p\n", node2);
 	if (!node2)
 		return (0);
 	//add node 2 infront of node1

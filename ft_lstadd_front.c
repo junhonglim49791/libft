@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/14 08:23:59 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 13:28:35 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:27:56 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new -> next = *lst;
 	*lst = new;
 }
+
 /*
 #include <stdio.h>
 

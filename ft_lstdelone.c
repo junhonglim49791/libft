@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 13:48:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 16:58:38 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:33:39 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,12 @@ heap's addresses. So this function can correctly free those
 2.
 if (lst && del) using this coudnt free the nodes, separating them
 allows at least the node to be free
+
+3.!!! use valgrind to check memory leak whenever there is malloc/free
 */
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (lst)
+	if (!lst)
 		return ;
 	if (del)
 		del(lst -> content);

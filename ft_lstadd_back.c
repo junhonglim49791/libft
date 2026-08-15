@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 12:50:54 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 13:46:16 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:32:39 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ int	main(void)
 	t_list	*node1;
 	t_list	*node2;
 	
-	node1 = NULL;
-	// node1 = ft_lstnew(&a); 
-	// if (!node1)
-	// 	return (0);
-	// printf("node1 addrs: %p\n", node1);
-	// printf("node1 content: %d\n", *(int *)node1 -> content);
+	// node1 = NULL;
+	node1 = ft_lstnew(&a); 
+	if (!node1)
+		return (0);
+	printf("node1 addrs: %p\n", node1);
+	printf("node1 content: %d\n", *(int *)node1 -> content);
 	node2 = ft_lstnew(&b);
 	if (!node2)
 		return (0);

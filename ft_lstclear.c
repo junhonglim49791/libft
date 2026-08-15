@@ -6,12 +6,11 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 15:07:18 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 16:59:17 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 19:38:13 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
 typedef struct s_list
 {
@@ -46,6 +45,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 }
 
 /*
+#include <stdio.h>
 void	print_nodes(t_list *node)
 {
 	int i;
@@ -101,5 +101,9 @@ int	main(void)
 	print_nodes(head);
 
 	ft_lstclear(&head, delcontent);
+	if (!head)
+		printf("list is deleted\n");
+	else
+		printf("Error\n");
 }
 */
