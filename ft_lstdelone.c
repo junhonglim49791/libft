@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 13:48:07 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 15:04:33 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 16:58:38 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,21 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 t_list	*ft_lstlast(t_list *lst);
 
 /*
+1.
 Since void *content of a node can points to data type, including
 heap's addresses. So this function can correctly free those
+
+2.
+if (lst && del) using this coudnt free the nodes, separating them
+allows at least the node to be free
 */
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (lst)
-	{
+		return ;
+	if (del)
 		del(lst -> content);
-		free(lst);
-	}
+	free(lst);
 }
 
 /*

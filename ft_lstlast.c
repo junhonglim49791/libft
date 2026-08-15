@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 12:11:23 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 13:41:04 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/15 16:34:27 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct s_list
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 
+/*if *lst is null then return NULL already*/
 t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst && lst -> next)
