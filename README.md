@@ -48,18 +48,78 @@ Include the header in your source files to access the prototypes:
 
 ## Library Overview
 
-| Category | Functions |
-|---|---|
-| Character classification | `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint` |
-| Character conversion | `ft_toupper`, `ft_tolower` |
-| Memory (raw buffers) | `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_memmove`, `ft_memchr`, `ft_memcmp` |
-| Allocation | `ft_calloc`, `ft_strdup` |
-| String length & copy | `ft_strlen`, `ft_strlcpy`, `ft_strlcat` |
-| String search & compare | `ft_strchr`, `ft_strrchr`, `ft_strncmp`, `ft_strnstr` |
-| Conversion | `ft_atoi`, `ft_itoa` |
-| String manipulation | `ft_substr`, `ft_strjoin`, `ft_strtrim`, `ft_split`, `ft_strmapi`, `ft_striteri` |
-| File descriptor output | `ft_putchar_fd`, `ft_putstr_fd`, `ft_putendl_fd`, `ft_putnbr_fd` |
-| Linked list | `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap` |
+### Character classification
+
+- `ft_isalpha` — checks if a character is an alphabetic letter (a-z, A-Z)
+- `ft_isdigit` — checks if a character is a digit (0-9)
+- `ft_isalnum` — checks if a character is alphabetic or a digit
+- `ft_isascii` — checks if a character is within the ASCII range (0-127)
+- `ft_isprint` — checks if a character is printable (including space)
+
+### Character conversion
+
+- `ft_toupper` — converts a lowercase letter to uppercase
+- `ft_tolower` — converts an uppercase letter to lowercase
+
+### Memory (raw buffers)
+
+- `ft_memset` — fills a block of memory with a given byte value
+- `ft_bzero` — fills a block of memory with zero bytes
+- `ft_memcpy` — copies a block of memory to another (non-overlapping)
+- `ft_memmove` — copies a block of memory to another (handles overlap safely)
+- `ft_memchr` — searches for a byte within a block of memory
+- `ft_memcmp` — compares two blocks of memory byte by byte
+
+### Allocation
+
+- `ft_calloc` — allocates zero-initialized memory for an array of elements
+- `ft_strdup` — duplicates a string into newly allocated memory
+
+### String length & copy
+
+- `ft_strlen` — returns the length of a null-terminated string
+- `ft_strlcpy` — copies a string into a buffer with a size limit
+- `ft_strlcat` — appends a string to a buffer with a size limit
+
+### String search & compare
+
+- `ft_strchr` — finds the first occurrence of a character in a string
+- `ft_strrchr` — finds the last occurrence of a character in a string
+- `ft_strncmp` — compares two strings up to a given number of characters
+- `ft_strnstr` — finds the first occurrence of a substring within a length limit
+
+### Conversion
+
+- `ft_atoi` — converts a string to an integer
+- `ft_itoa` — converts an integer to a newly allocated string
+
+### String manipulation
+
+- `ft_substr` — extracts a substring from a string
+- `ft_strjoin` — concatenates two strings into a newly allocated string
+- `ft_strtrim` — trims leading/trailing characters from a string
+- `ft_split` — splits a string into an array of substrings by a delimiter
+- `ft_strmapi` — applies a function to each character of a string, building a new string
+- `ft_striteri` — applies a function to each character of a string in place
+
+### File descriptor output
+
+- `ft_putchar_fd` — writes a character to a given file descriptor
+- `ft_putstr_fd` — writes a string to a given file descriptor
+- `ft_putendl_fd` — writes a string followed by a newline to a given file descriptor
+- `ft_putnbr_fd` — writes an integer to a given file descriptor
+
+### Linked list
+
+- `ft_lstnew` — creates a new list node
+- `ft_lstadd_front` — adds a node to the front of a list
+- `ft_lstsize` — counts the number of nodes in a list
+- `ft_lstlast` — returns the last node of a list
+- `ft_lstadd_back` — adds a node to the end of a list
+- `ft_lstdelone` — deletes a single node and its content
+- `ft_lstclear` — deletes and frees an entire list
+- `ft_lstiter` — applies a function to each node's content
+- `ft_lstmap` — creates a new list by applying a function to each node's content
 
 ## Resources
 
