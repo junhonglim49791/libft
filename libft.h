@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/15 20:49:24 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 21:13:17 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/16 08:57:05 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void			ft_putnbr_fd(int n, int fd);
 //--Conversion between string and int
 int				ft_atoi(const char *s);
 char			*ft_itoa(int n);
+
 //String functions
 size_t			ft_strlen(const char *s);
 char			*ft_strchr(const char *s, int c);
