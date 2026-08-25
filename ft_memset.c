@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/04 14:37:05 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 21:51:52 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/25 18:25:36 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,28 @@ void	*ft_memset(void *s, int c, size_t n)
 		*(str + i++) = c;
 	return (s);
 }
+/* libft tester warmachine
 
+Compiled with -fsanitize=address. Under WSL, LeakSanitizer's exit-time
+heap scan can hang when the test's main() leaves an unfree'd malloc 
+— LSan's thread-suspend step seems to stall on WSL's ptrace layer specifically.
+
+Workaround for local testing only:
+  ASAN_OPTIONS=detect_leaks=0 ./user_exe
+This disables just the leak scan, keeps full ASan error detection.
+Not seen on native Linux / actual grading environment.
+
+int		main(int argc, const char *argv[])
+{
+	void	*mem;
+	int		arg;
+
+	alarm(5);
+	if (!(mem = malloc(sizeof(*mem) * 15)) || argc == 1)
+		return (0);
+	memset(mem, 'j', 15);
+}
+*/
 /*
 #include <stdio.h>
 #include <string.h>

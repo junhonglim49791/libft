@@ -6,7 +6,7 @@
 /*   By: junlim <junlim@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/05 09:31:38 by junlim            #+#    #+#             */
-/*   Updated: 2026/08/15 20:50:51 by junlim           ###   ########.fr       */
+/*   Updated: 2026/08/25 18:33:28 by junlim           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,42 @@ Further improvement
 	// first 5 bytes, so it never reads outside the destination buffer.
 */
 #include "libft.h"
+#include <stdio.h>
 
+/*
+1.
+-fsanitize=address if not applied when creating libft.a, then this check
+will not applied to ft_strlen.
+
+yining's previous solution did:
+while(dst[i])
+	i++;
+in ft_strlcat, which is instrumented  with this flag, and will catch
+buffer overflow.
+
+2.
+Root cause: -fsanitize=address is a compile-time instrumentation flag,
+applied per translation unit at the moment clang compiles a .c file.
+It does NOT apply to already-compiled .o files sitting inside a 
+prebuilt libft.a. 
+If we want to apply this flag to the library's function, we should do it in 
+compile time.
+
+3.
+fix is to bound the scan by `size` directly inside ft_strlcat
+to prevent overflow at the first place:
+
+    i = 0;
+    while (i < size && dst[i])
+        i++;
+    dst_len = i;
+
+4.
+To verify a fix (or confirm a suspected bug) with full ASan coverage,
+temporarily rebuild libft.a itself with -fsanitize=address in CFLAGS,
+`make fclean && make`, then relink. Revert CFLAGS before final
+submission — ASan isn't part of the expected deliverable.
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
@@ -77,6 +112,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
+
 /*
 #include <stdio.h>
 #include <bsd/string.h>
